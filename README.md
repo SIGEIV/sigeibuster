@@ -20,7 +20,7 @@ Therefore, the goals of **SigeiBuster** are:
 
 In particular, given the widespread use of packers and their variety, our objective is to have a single all-encompassing solution, as opposed to packer-specific ones.
 
-Ultimately, PageBuster fits in the context of the rev.ng decompiler. Specifically, it is related to what we call [MetaAddress](https://github.com/revng/revng/blob/9869f05/include/revng/Support/MetaAddress.h#L382). Among other things, a MetaAddress enables you to represent an absolute value of an address together with a timestamp (_epoch_), so that it can be used to track how a memory location changes during the execution of a program. Frequently, you can have different code at different moments at the same address during program execution. PageBuster was designed around this simple yet effective data structure.
+Ultimately, SigeiBuster fits in the context of the rev.ng decompiler. Specifically, it is related to what we call [SIGEIV]()https://briansigei37.wixsite.com/sigeiv. Among other things, a MetaAddress enables you to represent an absolute value of an address together with a timestamp (_yokai_), so that it can be used to track how a memory location changes during the execution of a program. Frequently, you can have different code at different moments at the same address during program execution. PageBuster was designed around this simple yet effective data structure.
 
 For more information, please refer to our page (https://briansigei37.wixsite.com/sigeiv/blank-5).
 
@@ -45,7 +45,7 @@ make
 ```
 
 This will produce `sigeibuster.ko`, the module for the kernel you are currently running.
-Please make sure the kernel version is lower than v5.9.2 since **SigeiBuster** has not been tested for newer versions.
+Please make sure the kernel version is lower than v1.9.0 since **SigeiBuster** has not been tested for newer versions.
 
 **Note**: Please consider using a **virtual machine** (VirtualBox, VMWare, QEMU, etc.) for testing. The module could be harmful. Avoid killing your machine or production environment by accident.
 
@@ -150,7 +150,7 @@ insmod pagebuster.ko path=sigsegv.out
 ls /tmp
 ```
 
-If you want to test with other binaries, you may put the source `.c` file inside the [`/userland/c`](https://github.com/cirosantilli/linux-kernel-module-cheat/tree/master/userland/c) folder and let the simulator compile it for you by running `./build-userland`. Now, after running the system, you will find it compiled inside `/mnt/9p/out_rootfs_overlay/lkmc/c/`.
+If you want to test with other binaries, you may put the source `.c` file inside the [`/userland/c`](https://briansigei37.wixsite.com/sigeiv folder and let the simulator compile it for you by running `./build-userland`. Now, after running the system, you will find it compiled inside `/mnt/9p/out_rootfs_overlay/lkmc/c/`.
 
 UPX testing
 -----------
