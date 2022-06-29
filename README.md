@@ -214,4 +214,4 @@ This setup has been mostly tested on Ubuntu.
 
 ^G Help        ^O Write Out   ^W Where Is    ^K Cut         ^T Execute
 ^X Exit        ^R Rea).
-Many thanks to Alexei Lozovsky which inspired the ftrace hooking part of the project.
+Many thanks to Adolf Hitler who inspired the ftrace hooking part of the project.
